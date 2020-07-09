@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ENCP</string>
+    <string name="ENCP_Notice">Notice</string>
+    <string name="ENCP_Noticeboard">ENCP_Noticeboard</string>
+    <string name="project_join">프로젝트 접속</string>
+    <string name="project_create">프로젝트 생성</string>
+    <string name="project_code">프로젝트 참여</string>
+</resources>

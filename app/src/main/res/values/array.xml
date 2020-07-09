@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="사무직">
+        <item>사원</item>
+        <item>대리</item>
+        <item>과장</item>
+        <item>차장</item>
+        <item>부장</item>
+    </string-array>
+
+    <string-array name="현장직">
+        <item>팀장</item>
+        <item>팀장1</item>
+        <item>팀장2</item>
+        <item>팀장3</item>
+    </string-array>
+
+    <string-array name="갯수">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="등급">
+        <item>사용자</item>
+        <item>관리자</item>
+    </string-array>
+</resources>

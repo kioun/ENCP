@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/upperuserlistlayout"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/upperuserlisttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="left"
+            android:layout_weight="2"
+            android:text="제목"></TextView>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/upperuserlistbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:text="상신완료"></TextView>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/upperuserlistbox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:text="검토완료"></TextView>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/upperuserlistbox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:text="결제완료"></TextView>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/upperuserlistbox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:text="배포완료"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_margin="10dp"
+            android:id="@+id/upperuserlistname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="이름"></TextView>
+    </LinearLayout>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
