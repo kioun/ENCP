@@ -1,4 +1,4 @@
-package com.encp.projecttest.list;
+package com.encp.projecttest.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.encp.projecttest.R;
+import com.encp.projecttest.item.listitem;
 
 import java.util.List;
 
@@ -50,9 +51,9 @@ public class drafterlistAdapter extends RecyclerView.Adapter<drafterlistAdapter.
 
     @Override
     public void onBindViewHolder(UpperViewHolder holder, final int position) {
-        holder.listgp.setText(upperItemList.get(position).Listgroup);
-        holder.listps.setText(upperItemList.get(position).Listposition);
-        holder.listnm.setText(upperItemList.get(position).Listname);
+        holder.listgp.setText(upperItemList.get(position).getListgroup());
+        holder.listps.setText(upperItemList.get(position).getListposition());
+        holder.listnm.setText(upperItemList.get(position).getListname());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

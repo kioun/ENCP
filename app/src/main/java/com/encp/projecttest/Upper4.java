@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.encp.projecttest.adapter.Upper4Adapter;
+import com.encp.projecttest.item.UpperItem;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 

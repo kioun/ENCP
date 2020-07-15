@@ -1,4 +1,4 @@
-package com.encp.projecttest;
+package com.encp.projecttest.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.encp.projecttest.R;
+import com.encp.projecttest.item.UpperItem;
 import com.encp.projecttest.detail.UpperStatusDetail;
 
 import java.util.List;
@@ -57,8 +59,8 @@ public class UpperStatusAdapter extends RecyclerView.Adapter<UpperStatusAdapter.
 
     @Override
     public void onBindViewHolder(UpperViewHolder holder, final int position) {
-        holder.UpperlistuserName.setText(upperItemList.get(position).UpperlistuserName);
-        holder.Upperlisttitle.setText(upperItemList.get(position).Upperlisttitle);
+        holder.UpperlistuserName.setText(upperItemList.get(position).getUpperlistuserName());
+        holder.Upperlisttitle.setText(upperItemList.get(position).getUpperlisttitle());
 
 
         distributecount2 = upperItemList.get(position).getUpperlistdistributecount();

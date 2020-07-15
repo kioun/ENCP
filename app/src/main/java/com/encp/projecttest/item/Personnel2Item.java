@@ -1,4 +1,4 @@
-package com.encp.projecttest;
+package com.encp.projecttest.item;
 
 public class Personnel2Item {
 

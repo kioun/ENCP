@@ -1,4 +1,4 @@
-package com.encp.projecttest.list;
+package com.encp.projecttest;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.encp.projecttest.R;
 import com.encp.projecttest.UserPage;
+import com.encp.projecttest.adapter.drafterlistAdapter;
+import com.encp.projecttest.item.listitem;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

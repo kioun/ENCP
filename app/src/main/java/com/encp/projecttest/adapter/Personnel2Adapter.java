@@ -1,4 +1,4 @@
-package com.encp.projecttest;
+package com.encp.projecttest.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.encp.projecttest.Detail2;
+import com.encp.projecttest.item.Personnel2Item;
+import com.encp.projecttest.R;
 
 import java.util.List;
 
@@ -45,20 +49,20 @@ public class Personnel2Adapter extends RecyclerView.Adapter<Personnel2Adapter.Pe
 
     @Override
     public void onBindViewHolder(Personnel2ViewHolder holder, final int position) {
-        holder.personID.setText(person2list.get(position).personnel2ID);
-        holder.personName.setText(person2list.get(position).personnel2Name);
-        holder.personGroup.setText(person2list.get(position).personnel2Group);
-        holder.personPosition.setText(person2list.get(position).personnel2Position);
+        holder.personID.setText(person2list.get(position).getPersonnel2ID());
+        holder.personName.setText(person2list.get(position).getPersonnel2Name());
+        holder.personGroup.setText(person2list.get(position).getPersonnel2Group());
+        holder.personPosition.setText(person2list.get(position).getPersonnel2Position());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 context = view.getContext();
-                Intent intent = new Intent(view.getContext(),Detail2.class);
-                intent.putExtra("pid",person2list.get(position).personnel2ID);
-                intent.putExtra("pname",person2list.get(position).personnel2Name);
-                intent.putExtra("pposition",person2list.get(position).personnel2Group);
-                intent.putExtra("pgroup",person2list.get(position).personnel2Position);
+                Intent intent = new Intent(view.getContext(), Detail2.class);
+                intent.putExtra("pid",person2list.get(position).getPersonnel2ID());
+                intent.putExtra("pname",person2list.get(position).getPersonnel2Name());
+                intent.putExtra("pposition",person2list.get(position).getPersonnel2Group());
+                intent.putExtra("pgroup",person2list.get(position).getPersonnel2Position());
                 context.startActivity(intent);
             }
         });

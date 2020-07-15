@@ -1,6 +1,6 @@
-package com.encp.projecttest;
+package com.encp.projecttest.item;
 
-public class Upperlist {
+public class UpperItem {
 
     String UpperlistuserID;
     String UpperlistpjcName;
@@ -13,11 +13,11 @@ public class Upperlist {
     String UpperlistuserName;
     String Upperlisttitle;
     int Upperlistdistributecount;
+    int Upperlistnoticenumber;
 
-
-    public Upperlist(String upperlistuserID, String upperlistpjcName, String upperlistpjcGroup, String upperlistdrafter, String upperlistreview,
+    public UpperItem(String upperlistuserID, String upperlistpjcName, String upperlistpjcGroup, String upperlistdrafter, String upperlistreview,
                      String upperlistpayment, String upperlistrecipient, String upperlistcontents, String upperlistuserName, String upperlisttitle,
-                     int upperlistdistributecount) {
+                     int upperlistdistributecount, int upperlistnoticenumber) {
         UpperlistuserID = upperlistuserID;
         UpperlistpjcName = upperlistpjcName;
         UpperlistpjcGroup = upperlistpjcGroup;
@@ -29,7 +29,8 @@ public class Upperlist {
         UpperlistuserName = upperlistuserName;
         Upperlisttitle = upperlisttitle;
         Upperlistdistributecount = upperlistdistributecount;
-    }
+        Upperlistnoticenumber = upperlistnoticenumber;
+}
 
     public String getUpperlistuserID() {
         return UpperlistuserID;
@@ -119,4 +120,11 @@ public class Upperlist {
         Upperlistdistributecount = upperlistdistributecount;
     }
 
+    public int getUpperlistnoticenumber() {
+        return Upperlistnoticenumber;
+    }
+
+    public void setUpperlistnoticenumber(int upperlistnoticenumber) {
+        Upperlistnoticenumber = upperlistnoticenumber;
+    }
 }

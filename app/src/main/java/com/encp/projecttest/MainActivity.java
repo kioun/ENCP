@@ -123,8 +123,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             });
-//            new BackgroundTaskMain2().execute();
-//            new BackgroundTaskMainnotice().execute();
 
     }
 
@@ -158,7 +156,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             try{
-//                target = "http://172.30.1.33/encp/pjcmain.php?userID=" + URLEncoder.encode(userID,"UTF-8");
                 target = "http://blrioun.cafe24.com/encp/php/pjcmain.php?userID=" + URLEncoder.encode(userID,"UTF-8");
             }catch (Exception e){
                 e.printStackTrace();

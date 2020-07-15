@@ -1,10 +1,13 @@
-package com.encp.projecttest;
+package com.encp.projecttest.adapter;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.encp.projecttest.Circulationlist;
+import com.encp.projecttest.R;
 
 import java.util.List;
 
@@ -35,7 +38,7 @@ public class CirculationlistAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v = View.inflate(context,R.layout.circulationuserlist,null);
+        View v = View.inflate(context, R.layout.circulationuserlist,null);
         TextView ccuserlisttitle = (TextView) v.findViewById(R.id.ccuserlist);
         TextView ccuserlistcc = (TextView) v.findViewById(R.id.ccuserlistcc);
 

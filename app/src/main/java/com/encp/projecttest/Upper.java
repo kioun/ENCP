@@ -14,7 +14,6 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
-import com.encp.projecttest.list.drafterlist;
 import com.encp.projecttest.request.UpperRequest;
 
 import org.json.JSONObject;
@@ -72,9 +71,6 @@ public class Upper extends AppCompatActivity {
                 String contents = uppercontents.getText().toString();
                 int distributecount = 0;
 
-//                int draftercount = (a+1);
-//                int reviewcount = (b+1);
-//                int paymentcount = (c+1);
                 dfdraftercount = (dfdraftercount+1);
                 rvreviewcount = (rvreviewcount+1);
                 pmpaymentcount = (pmpaymentcount+1);

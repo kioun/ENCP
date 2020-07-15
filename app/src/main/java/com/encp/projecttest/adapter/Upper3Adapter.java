@@ -1,4 +1,4 @@
-package com.encp.projecttest;
+package com.encp.projecttest.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,21 +6,24 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.encp.projecttest.detail.Upper4Detail;
+import com.encp.projecttest.R;
+import com.encp.projecttest.item.UpperItem;
+import com.encp.projecttest.detail.Upper3Detail;
 
 import java.util.List;
 
-public class Upper4Adapter extends RecyclerView.Adapter<Upper4Adapter.UpperViewHolder> {
+public class Upper3Adapter extends RecyclerView.Adapter<Upper3Adapter.UpperViewHolder> {
 
     private Context context;
     private List<UpperItem> upperItemList;
-    private int distributecount4;
+    private int distributecount2;
 
-    public Upper4Adapter(Context context, List<UpperItem> upperItemList) {
+    public Upper3Adapter(Context context, List<UpperItem> upperItemList) {
         this.context = context;
         this.upperItemList = upperItemList;
     }
@@ -28,13 +31,15 @@ public class Upper4Adapter extends RecyclerView.Adapter<Upper4Adapter.UpperViewH
     public class UpperViewHolder extends RecyclerView.ViewHolder{
         public TextView UpperlistuserName;
         public TextView Upperlisttitle;
+        public LinearLayout Upperlistlayout;
         public TextView Upperlistimg;
 
         public UpperViewHolder(View view) {
             super(view);
             this.UpperlistuserName = (TextView)view.findViewById(R.id.upperuserlistname);
             this.Upperlisttitle = (TextView) view.findViewById(R.id.upperuserlisttitle);
-            this.Upperlistimg = (TextView) view.findViewById(R.id.upperuserlistbox3);
+            this.Upperlistlayout = (LinearLayout) view.findViewById(R.id.upperuserlistlayout);
+            this.Upperlistimg = (TextView) view.findViewById(R.id.upperuserlistbox2);
         }
     }
 
@@ -47,13 +52,14 @@ public class Upper4Adapter extends RecyclerView.Adapter<Upper4Adapter.UpperViewH
 
     @Override
     public void onBindViewHolder(UpperViewHolder holder, final int position) {
-        holder.UpperlistuserName.setText(upperItemList.get(position).UpperlistuserName);
-        holder.Upperlisttitle.setText(upperItemList.get(position).Upperlisttitle);
+        holder.UpperlistuserName.setText(upperItemList.get(position).getUpperlistuserName());
+        holder.Upperlisttitle.setText(upperItemList.get(position).getUpperlisttitle());
 
-        distributecount4 = upperItemList.get(position).getUpperlistdistributecount();
-        if (distributecount4 > 2){
+        distributecount2 = upperItemList.get(position).getUpperlistdistributecount();
+        if (distributecount2 > 1){
             holder.Upperlistimg.setVisibility(View.VISIBLE);
         }
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,10 +73,10 @@ public class Upper4Adapter extends RecyclerView.Adapter<Upper4Adapter.UpperViewH
                 String title2 = upperItemList.get(position).getUpperlisttitle();
                 String pjcGroup2 = upperItemList.get(position).getUpperlistpjcGroup();
                 String review2 = upperItemList.get(position).getUpperlistreview();
-                int distributecount2 = upperItemList.get(position).getUpperlistdistributecount();
+                distributecount2 = upperItemList.get(position).getUpperlistdistributecount();
                 int noticenumber2 = upperItemList.get(position).getUpperlistnoticenumber();
 
-                Intent intent1 = new Intent(view.getContext(), Upper4Detail.class);
+                Intent intent1 = new Intent(view.getContext(), Upper3Detail.class);
                 intent1.putExtra("drafter", drafter2);
                 intent1.putExtra("pjcName", pjcName2);
                 intent1.putExtra("review", review2);

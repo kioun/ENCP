@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import com.encp.projecttest.adapter.Upper2Adapter;
+import com.encp.projecttest.item.UpperItem;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 

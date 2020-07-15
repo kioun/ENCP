@@ -24,7 +24,7 @@ public class Loding extends AppCompatActivity {
 
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(getResources(),R.drawable.titleimage2,options);
+//        BitmapFactory.decodeResource(getResources(),R.drawable.titleimage2,options);
         int request_Width;
         options.inSampleSize = setSimpleSize(options,REQUEST_WHIDH,REQUEST_HEIGHT);
         options.inJustDecodeBounds = false;

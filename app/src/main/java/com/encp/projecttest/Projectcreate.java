@@ -77,9 +77,6 @@ public class Projectcreate extends AppCompatActivity {
                             boolean success = jsonObject.getBoolean("success");
                             if (success){
                                 Toast.makeText(Projectcreate.this,"프로젝트 생성완료",Toast.LENGTH_SHORT).show();
-//                                Intent intent1 = new Intent(Projectcreate.this,MainActivity.class);
-//                                intent1.putExtra("userRanking", MainActivity.userRanking);
-//                                intent1.putExtra("userID",MainActivity.userID);
                                 setResult(100);
                                 finish();
                             }else {

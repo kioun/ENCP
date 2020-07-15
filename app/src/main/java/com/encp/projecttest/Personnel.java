@@ -12,6 +12,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.encp.projecttest.adapter.Personnel2Adapter;
+import com.encp.projecttest.item.Personnel2Item;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 

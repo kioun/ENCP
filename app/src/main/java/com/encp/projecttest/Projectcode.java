@@ -59,7 +59,6 @@ public class Projectcode extends AppCompatActivity {
                             boolean success = jsonObject.getBoolean("success");
                             if (success){
                                 Toast.makeText(Projectcode.this,"성공",Toast.LENGTH_SHORT).show();
-//                                Intent intent1 = new Intent(Projectcode.this,MainActivity.class);
                                 setResult(101);
                                 finish();
                             }

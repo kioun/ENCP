@@ -23,9 +23,8 @@
         <activity android:name=".detail.UpperStatusDetail" />
         <activity android:name=".detail.DistributeDetail" />
         <activity android:name=".Distribute" />
-        <activity android:name=".Circulation" />
         <activity android:name=".Upper" />
-        <activity android:name=".list.drafterlist" />
+        <activity android:name=".drafterlist" />
         <activity
             android:name=".Projectcode"
             android:parentActivityName=".MainActivity" />
