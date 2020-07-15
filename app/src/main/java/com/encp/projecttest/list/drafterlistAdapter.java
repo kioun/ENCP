@@ -61,19 +61,25 @@ public class drafterlistAdapter extends RecyclerView.Adapter<drafterlistAdapter.
                 String listgroup = upperItemList.get(position).getListgroup();
                 String listposition = upperItemList.get(position).getListposition();
                 String listname = upperItemList.get(position).getListname();
+                int listdraftercount = upperItemList.get(position).getListdraftercount();
+                int listreviewcount = upperItemList.get(position).getListreviewcount();
+                int listpaymentcount = upperItemList.get(position).getListpaymentcount();
 
                 Intent intent = new Intent();
                 intent.putExtra("review",listname);
                 intent.putExtra("reviewgroup",listgroup);
                 intent.putExtra("reviewposition",listposition);
+                intent.putExtra("rvreviewcount",listreviewcount);
 
                 intent.putExtra("drafter",listname);
                 intent.putExtra("draftergroup", listgroup);
                 intent.putExtra("drafterposition",listposition);
+                intent.putExtra("dfdraftercount",listdraftercount);
 
                 intent.putExtra("payment",listname);
                 intent.putExtra("paymentgroup",listgroup);
                 intent.putExtra("paymentposition",listposition);
+                intent.putExtra("pmpaymentcount",listpaymentcount);
 
                 intent.putExtra("recipient",listname);
                 intent.putExtra("recipientgroup",listgroup);

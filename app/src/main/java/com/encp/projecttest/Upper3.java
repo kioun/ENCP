@@ -56,7 +56,6 @@ public class Upper3 extends AppCompatActivity {
 //                        + "&pjcGroup=" + URLEncoder.encode(UserPage.perGroup, "UTF-8")
 //                        + "&review=" + URLEncoder.encode(MainActivity.userName, "UTF-8");
                 target = "http://blrioun.cafe24.com/encp/php/Upper3.php?pjcName=" + URLEncoder.encode(UserPage.perName, "UTF-8")
-                        + "&pjcGroup=" + URLEncoder.encode(UserPage.perGroup, "UTF-8")
                         + "&review=" + URLEncoder.encode(MainActivity.userName, "UTF-8")
                         + "&reviewgroup=" + URLEncoder.encode(UserPage.perGroup,"UTF-8")
                         + "&reviewposition=" + URLEncoder.encode(UserPage.perPosition,"UTF-8");

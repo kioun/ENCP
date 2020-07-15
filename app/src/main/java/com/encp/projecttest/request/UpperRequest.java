@@ -13,12 +13,12 @@ public class UpperRequest extends StringRequest {
     private HashMap<String, String> parameters;
 
     public UpperRequest(String userID, String pjcName, String pjcGroup, String nbuserName,
-                        String drafter, String draftergroup, String drafterposition,
-                        String review, String reviewgroup, String reviewposition,
-                        String payment, String paymentgroup, String paymentposition,
+                        String drafter, String draftergroup, String drafterposition, int dfdraftercount,
+                        String review, String reviewgroup, String reviewposition, int rvreviewcount,
+                        String payment, String paymentgroup, String paymentposition, int pmpaymentcount,
                         String recipient, String recipientgroup, String recipientposition,
                         String title, String contents,
-                        int distributecount, int draftercount, int reviewcount, int paymentcount, Response.Listener<String> listener){
+                        int distributecount, Response.Listener<String> listener){
         super(Method.POST, URL, listener, null);
 
         parameters = new HashMap<>();
@@ -29,21 +29,21 @@ public class UpperRequest extends StringRequest {
         parameters.put("drafter", drafter);
         parameters.put("draftergroup", draftergroup);
         parameters.put("drafterposition",drafterposition);
+        parameters.put("dfdraftercount", dfdraftercount+"");
         parameters.put("review", review);
         parameters.put("reviewgroup", reviewgroup);
         parameters.put("reviewposition", reviewposition);
+        parameters.put("rvreviewcount", rvreviewcount+"");
         parameters.put("payment", payment);
         parameters.put("paymentgroup", paymentgroup);
         parameters.put("paymentposition", paymentposition);
+        parameters.put("pmpaymentcount", pmpaymentcount+"");
         parameters.put("recipient", recipient);
         parameters.put("recipientgroup", recipientgroup);
         parameters.put("recipientposition",recipientposition);
         parameters.put("title", title);
         parameters.put("contents",contents);
         parameters.put("distributecount", distributecount+"");
-        parameters.put("draftercount", draftercount+"");
-        parameters.put("reviewcount", reviewcount+"");
-        parameters.put("paymentcount", paymentcount+"");
     }
 
     public Map<String, String> getParams(){

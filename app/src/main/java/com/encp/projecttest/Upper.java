@@ -27,8 +27,8 @@ public class Upper extends AppCompatActivity {
     Button upperbtn,listbtn;
 
     String draftergroup,drafterposition,reviewgroup,reviewposition,paymentgroup,paymentposition,recipientgroup,recipientposition;
-//    String[] items = {"aa", "bb", "cc", "dd"};
-//    String[] userlist;
+    int dfdraftercount,rvreviewcount,pmpaymentcount;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,27 +49,6 @@ public class Upper extends AppCompatActivity {
         upperbtn = (Button) findViewById(R.id.upperbtn);
         listbtn = (Button) findViewById(R.id.listbtn);
 
-        //유저목록리스트
-//        new BackgroundTaskuserlist().execute();
-
-//        //보내는사람 목록
-//        listbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(Upper.this);
-//                builder.setTitle("목록")
-//                        .setItems(userlist, new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                Toast.makeText(getApplicationContext(),userlist[i],Toast.LENGTH_LONG).show();
-//                            }
-//                        });
-//                 AlertDialog alertDialog = builder.create();
-//                 alertDialog.show();
-//            }
-//        });
-
-//        Intent intent = getIntent();
 
         upperpjname.setText(UserPage.perName);
         upperpjgroup.setText(UserPage.perGroup);
@@ -92,9 +71,13 @@ public class Upper extends AppCompatActivity {
                 String title = uppertitle.getText().toString();
                 String contents = uppercontents.getText().toString();
                 int distributecount = 0;
-                int draftercount = (a+1);
-                int reviewcount = (b+1);
-                int paymentcount = (c+1);
+
+//                int draftercount = (a+1);
+//                int reviewcount = (b+1);
+//                int paymentcount = (c+1);
+                dfdraftercount = (dfdraftercount+1);
+                rvreviewcount = (rvreviewcount+1);
+                pmpaymentcount = (pmpaymentcount+1);
 
                 Response.Listener<String> responselistener = new Response.Listener<String>() {
                     @Override
@@ -114,12 +97,11 @@ public class Upper extends AppCompatActivity {
                 };
 
                 UpperRequest upperRequest = new UpperRequest(userID, pjcName, pjcGroup, nbuserName,
-                        drafter, draftergroup, drafterposition,
-                        review, reviewgroup, reviewposition,
-                        payment, paymentgroup, paymentposition,
+                        drafter, draftergroup, drafterposition, dfdraftercount,
+                        review, reviewgroup, reviewposition, rvreviewcount,
+                        payment, paymentgroup, paymentposition,pmpaymentcount,
                         recipient, recipientgroup, recipientposition,
-                        title, contents, distributecount,
-                        draftercount, reviewcount, paymentcount, responselistener);
+                        title, contents, distributecount, responselistener);
                 RequestQueue queue = Volley.newRequestQueue(Upper.this);
                 queue.add(upperRequest);
             }
@@ -161,18 +143,23 @@ public class Upper extends AppCompatActivity {
             upperdrafter.setText(drafter1);
             draftergroup = data.getStringExtra("draftergroup");
             drafterposition = data.getStringExtra("drafterposition");
+            dfdraftercount = data.getIntExtra("dfdraftercount",1);
+
         }
         if (requestCode == 222){
             String review1 = data.getStringExtra("review");
             upperreview.setText(review1);
             reviewgroup = data.getStringExtra("reviewgroup");
             reviewposition = data.getStringExtra("reviewposition");
+            rvreviewcount = data.getIntExtra("rvreviewcount",1);
+
         }
         if (requestCode == 333){
             String payment1 = data.getStringExtra("payment");
             upperpayment.setText(payment1);
             paymentgroup = data.getStringExtra("paymentgroup");
             paymentposition = data.getStringExtra("paymentposition");
+            pmpaymentcount = data.getIntExtra("pmpaymentcount",1);
         }
         if (requestCode == 444){
             String recipient1 = data.getStringExtra("recipient");
@@ -182,69 +169,5 @@ public class Upper extends AppCompatActivity {
         }
     }
 
-    //    class BackgroundTaskuserlist extends AsyncTask<Void, Void, String>{
-//
-//        String target;
-//
-//        @Override
-//        protected void onPreExecute() {
-//            try {
-//                //                target = "http://172.30.1.33/encp/Mainnotice.php";
-//                target = "http://blrioun.cafe24.com/encp/php/userlist.php?pjcName="+ URLEncoder.encode(UserPage.perName,"UTF-8")
-//                + "&pjcRandom=" + URLEncoder.encode(UserPage.perRandom,"UTF-8");
-//            }catch (Exception e){
-//                e.printStackTrace();
-//            }
-//
-//        }
-//
-//        @Override
-//        protected String doInBackground(Void... voids) {
-//            try{
-//                URL url = new URL(target);
-//                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-//                InputStream inputStream = httpURLConnection.getInputStream();
-//                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-//                String temp;
-//                StringBuilder stringBuilder = new StringBuilder();
-//                while ((temp = bufferedReader.readLine()) != null){
-//                    stringBuilder.append(temp+"\n");
-//                }
-//                bufferedReader.close();
-//                inputStream.close();
-//                httpURLConnection.disconnect();
-//                return stringBuilder.toString().trim();
-//            }catch (Exception e){
-//                e.printStackTrace();
-//            }
-//            return null;
-//        }
-//
-//        @Override
-//        protected void onProgressUpdate(Void... values) {
-//            super.onProgressUpdate(values);
-//        }
-//
-//        @Override
-//        protected void onPostExecute(String s) {
-//            try{
-//                JSONObject jsonObject = new JSONObject(s);
-//                JSONArray jsonArray = jsonObject.getJSONArray("response");
-//                int count=0;
-//
-//                while (count < jsonArray.length()){
-//                    JSONObject object = jsonArray.getJSONObject(count);
-//                    test = object.getString("userName");
-//
-//                    Toast.makeText(getApplicationContext(),test,Toast.LENGTH_LONG).show();
-//                    userlist[count] = test;
-//                    count++;
-//                }
-//
-//            }catch (Exception e){
-//                e.printStackTrace();
-//            }
-//        }
-//    }
 
 }

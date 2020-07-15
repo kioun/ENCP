@@ -29,6 +29,7 @@ public class drafterlist extends AppCompatActivity {
     private List<listitem> upperlist;
 
     String drafterlistuserName, drafterlistpjcGroup, drafterlistpjcPosition;
+    int drafterdraftercount,drafterreviewcount,drafterpaymentcount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,9 +99,14 @@ public class drafterlist extends AppCompatActivity {
                     JSONObject object = jsonArray.getJSONObject(count);
                     drafterlistpjcGroup = object.getString("pjcGroup");
                     drafterlistpjcPosition = object.getString("pjcPosition");
-                    drafterlistuserName = object.getString("userID");
+                    drafterlistuserName = object.getString("userName");
+                    drafterdraftercount = object.getInt("draftercount");
+                    drafterreviewcount = object.getInt("reviewcount");
+                    drafterpaymentcount = object.getInt("paymentcount");
 
-                    listitem listitem = new listitem(drafterlistpjcGroup, drafterlistpjcPosition, drafterlistuserName);
+
+                    listitem listitem = new listitem(drafterlistpjcGroup, drafterlistpjcPosition, drafterlistuserName,
+                            drafterdraftercount, drafterreviewcount, drafterpaymentcount);
                     upperlist.add(listitem);
                     drafterlistadapter.notifyDataSetChanged();
                     count++;

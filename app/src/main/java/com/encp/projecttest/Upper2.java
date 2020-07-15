@@ -57,7 +57,6 @@ public class Upper2 extends AppCompatActivity {
 ////                        + "&pjcGroup=" + URLEncoder.encode(UserPage.perGroup, "UTF-8")
 ////                        + "&drafter=" + URLEncoder.encode(MainActivity.userName, "UTF-8");
                 target = "http://blrioun.cafe24.com/encp/php/Upper.php?pjcName=" + URLEncoder.encode(UserPage.perName, "UTF-8")
-                        + "&pjcGroup=" + URLEncoder.encode(UserPage.perGroup, "UTF-8")
                         + "&drafter=" + URLEncoder.encode(MainActivity.userName, "UTF-8")
                         + "&draftergroup=" + URLEncoder.encode(UserPage.perGroup,"UTF-8")
                         + "&drafterposition=" + URLEncoder.encode(UserPage.perPosition,"UTF-8");
