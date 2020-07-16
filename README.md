@@ -16,7 +16,8 @@
 
 ## 프로젝트
 
-![ezgif com-video-to-gif (6)](https://user-images.githubusercontent.com/52917127/87667217-ef34cb80-c7a4-11ea-975d-bdc5a690ddec.gif)
+![ezgif com-video-to-gif (7)](https://user-images.githubusercontent.com/52917127/87667440-4d61ae80-c7a5-11ea-99bd-d2d7689d5f8b.gif)
+
 
 
 
