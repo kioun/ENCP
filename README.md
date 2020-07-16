@@ -1,7 +1,8 @@
 # ENCP
  - 간편한 결재서류 앱
  
-![ezgif com-resize](https://user-images.githubusercontent.com/52917127/87660618-526d3080-c79a-11ea-9114-3c50a16770ba.png)
+![ezgif com-resize (4)](https://user-images.githubusercontent.com/52917127/87661500-ab899400-c79b-11ea-90ca-29fb440325fa.png)
+
 
 ## 회원가입
 
