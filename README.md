@@ -12,7 +12,8 @@
 
 ## 회원가입
 
-![ezgif com-resize (2)](https://user-images.githubusercontent.com/52917127/87661330-636a7180-c79b-11ea-895e-a9230045a9f6.png)
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/52917127/87663895-65ceca80-c79f-11ea-8a4d-b7533bbaaa6e.gif)
+
 
 
 
