@@ -5,6 +5,7 @@
 
 ## 회원가입
 
-![ezgif com-resize (1)](https://user-images.githubusercontent.com/52917127/87661159-22725d00-c79b-11ea-94e6-f3ede61daabc.png)
+![ezgif com-resize (2)](https://user-images.githubusercontent.com/52917127/87661330-636a7180-c79b-11ea-895e-a9230045a9f6.png)
+
 
 
