@@ -20,6 +20,7 @@
 
 ## 프로젝트 참여
 
+![ezgif com-video-to-gif (4)](https://user-images.githubusercontent.com/52917127/87666034-e3e0a080-c7a2-11ea-9664-df2950cb6daa.gif)
 
 
 
