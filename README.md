@@ -4,6 +4,12 @@
 ![ezgif com-resize (4)](https://user-images.githubusercontent.com/52917127/87661500-ab899400-c79b-11ea-90ca-29fb440325fa.png)
 
 
+## 주요기능
+- Volley 사용
+- PHP 사용
+- MySQL 사용
+
+
 ## 회원가입
 
 ![ezgif com-resize (2)](https://user-images.githubusercontent.com/52917127/87661330-636a7180-c79b-11ea-895e-a9230045a9f6.png)
